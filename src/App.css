@@ -1,38 +1,97 @@
-.App {
+.game {
+  max-width: 500px;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.body {
+  display: flex;
+}
+
+.help {
+  color: #666;
+  margin: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left {
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+  border: thin solid #ddd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right {
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+  border: thin solid #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.star {
+	display: inline-block;
+  margin: 0px 15px;
+  margin-top: 2px;
+}
+
+.star:after {
+  content: "\2605";
+  font-size: 51px;
+}
+
+.number {
+  background-color: #eee;
+  border: thin solid #ddd;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.number:focus, .number:active {
+  outline: none;
+  border: thin solid #ddd;
+}
+
+.timer {
+	color: #666;
+  margin-top: 10px;
+  margin-left: 3px;
+}
+
+.game-done {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.game-done button {
+  text-align: center;
+  padding: 0.6rem 1.5rem;
+  border: thin solid #ddd;
+  font-size: 17px;
+  background-color: steelblue;
+  border-radius: 10px;
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.12), 1px 2px 4px rgb(0 0 0);
+  outline: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.12), 2px 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-done button:hover {
+  transform: scale(0.95);
+}
+
+.game-done .message {
+  font-size: 2.15rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 1.7rem;
+  font-family: cursive;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.12), 2px 1px 2px rgba(0, 0, 0, 0.24);
 }
